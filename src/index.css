@@ -1,0 +1,89 @@
+/* UNIVERSAL STYLING */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------------------------------- */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.body-color {
+  background-color: #f8f9fa;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.h1-txt {
+  font-size: 40px;
+}
+
+.h3-txt {
+  font-size: 26px;
+}
+
+.btn-input-form-text {
+  font-size: 22px;
+}
+
+.links-txt {
+  font-size: 1.2rem;
+}
+
+.grey-color {
+  color: #5c5c5c;
+}
+
+.header-bg {
+  background-color: #fbf1e9;
+}
+
+#brand {
+  max-width: 4rem;
+}
+
+.actionsImg {
+  width: 2rem;
+}
+
+.nav-shadow {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.arrival-item {
+  width: 100%;
+}
+
+.arrival-item img {
+  width: 100%;
+  height: 40rem;
+  object-fit: cover;
+}
+
+.about-img {
+  max-height: 50rem;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.product-main-img {
+  height: 50vh;
+}
+
+.product-main-img img {
+  object-fit: cover;
+}
+
+.card-img-top {
+  width: 90%;
+  height: 20rem;
+  object-fit: cover;
+}
