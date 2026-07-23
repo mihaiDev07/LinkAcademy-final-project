@@ -5,7 +5,7 @@ import type { ApiProduct } from '../types/ApiProduct';
 
 import productImages from './productImages';
 
-function normalizeProduct(product: ApiProduct, index = 0): Product {
+function normalizeProduct(product: ApiProduct): Product {
   return {
     id: product.id,
     title: product.title,
@@ -21,7 +21,7 @@ function normalizeProduct(product: ApiProduct, index = 0): Product {
 export async function getProducts(): Promise<Product[]> {
   const data = await apiRequest<ApiProduct[]>('/products');
 
-  return data.map((product, index) => normalizeProduct(product, index));
+  return data.map((product) => normalizeProduct(product));
 }
 
 export async function getProduct(id: number): Promise<Product> {
@@ -29,31 +29,3 @@ export async function getProduct(id: number): Promise<Product> {
 
   return normalizeProduct(data);
 }
-// export async function createProduct(
-//   product: Omit<Product, 'id'>,
-// ): Promise<Product> {
-//   const data = await apiRequest<ApiProduct>('/products', {
-//     method: 'POST',
-//     body: product,
-//   });
-
-//   return normalizeProduct(data);
-// }
-
-// export async function updateProduct(
-//   id: number,
-//   product: Product,
-// ): Promise<Product> {
-//   const data = await apiRequest<ApiProduct>(`/products/${id}`, {
-//     method: 'PUT',
-//     body: product,
-//   });
-
-//   return normalizeProduct(data);
-// }
-
-// export async function deleteProduct(id: number): Promise<void> {
-//   await apiRequest<void>(`/products/${id}`, {
-//     method: 'DELETE',
-//   });
-// }

@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
 import aboutUs1 from '../assets/aboutUs-1.png';
-import aboutUs2 from '../assets/aboutUs-2.png';
-import aboutUs3 from '../assets/aboutUs-3.png';
-import aboutUs4 from '../assets/aboutUs-4.png';
+
 import { team } from '../data/team';
 import Employer from './Employer';
 
